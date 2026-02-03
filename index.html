@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Alif ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      font-family: 'Georgia', 'Times New Roman', serif;
+      color: #2c2c2c;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      max-width: 800px;
+      padding: 40px;
+      margin: 20px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #c94b4b;
+    }
+
+    p {
+      font-size: 1.15rem;
+      line-height: 1.9;
+      text-align: justify;
+    }
+
+    .heart {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 30px;
+    }
+
+    footer {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  
+    /* Floating hearts animation */
+    .floating-heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 20px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-110vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Alif ❤️</h1>
+    <p>
+      Alif, I don’t think words will ever be enough to explain how deeply I adore you, but I’ll keep trying for the rest of my life anyway. From the moment you came into my world, everything started to feel softer, brighter, and more meaningful. The way you think, the way you care, the way you exist so genuinely, it all amazes me every single day. I love how you’re not perfect, yet you’re perfect to me, and how even your smallest smiles have the power to calm my heart. You are someone I admire, respect, and cherish with everything I have. I don’t just love you for who you are today, but for who you’re becoming, and for every version of you I’ll get to know in the future. I want you to know that my love isn’t temporary, convenient, or fragile, it’s steady, intentional, and here to stay. I choose you every day, not because I have to, but because my heart wants to. No matter where life takes us, no matter how time changes things, my love for you will remain constant, growing stronger with every moment we share. I’ll love you through laughter and silence, through good days and hard ones, through everything life brings our way. I adore you more than you know, and I will love you for the rest of my life, with patience, loyalty, and a heart that is always yours.
+    </p>
+    <div class="heart">💖</div>
+    <footer>
+      Forever yours
+    </footer>
+  </div>
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'floating-heart';
+      heart.innerHTML = '💖';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 4 + Math.random() * 3 + 's';
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 7000);
+    }
+
+    setInterval(createHeart, 500);
+  </script>
+</body>
+</html>
